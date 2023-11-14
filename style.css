@@ -1,0 +1,210 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: font1;
+    src: url(28\ Days\ Later.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #334faa;
+    overflow-x: hidden;
+} 
+
+header{
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    background: url(https://i.pinimg.com/474x/23/49/28/2349287a4727ffb3291c3cd09a44f2a0.jpg);
+    background-position-x: 50%;
+    background-size: cover;
+    z-index: 1;
+    background-attachment: fixed;
+}
+
+
+h1{
+    font-family: font1;
+    text-align: center;
+    translate: 0 15vh;
+    font-size: 72px;
+    z-index: 1;
+}
+
+.imgconteiner{
+    transform: translateY(-13vh);
+    background-color: #000;
+    opacity: 0;
+    animation: disappear 5s;
+    
+}
+.limg{
+    transform: translate(-50% -50%);
+    translate: -29% 15%;
+    height: 80vh;
+    opacity: 0;
+    z-index: 2;
+    margin-bottom: 40vh;
+    animation: disappear 5s;
+    align-items: center;
+}
+
+main{
+    overflow: hidden;
+}
+
+.conteiner{
+    opacity: 1;
+    width: 95%;
+    overflow: hidden;
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius:10px;
+    animation: born 10s;
+}
+
+
+.imagem img{
+    width: 100%;
+    height: 100%;
+}
+
+.navegacao{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;  
+}
+
+.bar{
+    border-radius: 5px;
+    background-color: #8b8b8b;
+    width: 30px;
+    height: 5px;
+    margin: 6px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.bar:hover{
+    background-color: #000;
+}
+
+input{
+    display: none;
+}
+
+.imagens{
+    display: flex;
+    height: 100%;
+    width: 600%;
+
+}
+
+.imagem{
+    width: 16.6666666667%;
+    transition: 0.5s;
+}
+
+#imagem1:checked ~ .img1{
+    margin-left: 0;  
+}
+
+#imagem2:checked ~ .img1{
+    margin-left: -16.6666666667%;;  
+}
+
+#imagem3:checked ~ .img1{
+    margin-left: -33.3333333333%;  
+}
+
+#imagem4:checked ~ .img1{
+    margin-left: -50%;  
+}
+
+#imagem5:checked ~ .img1{
+    margin-left: -66.6666666667%;  
+}
+
+#imagem6:checked ~ .img1{
+    margin-left: -83.3333333333%;  
+}
+
+footer{
+    position: absolute;
+    top: 190%;
+    transform: translate(-50%);
+    margin-left: 50%;
+    font-family: sans-serif;
+    background-color: #003cff;
+    text-align: center;
+}
+
+@keyframes disappear {
+    from{
+        opacity: 1;
+    }
+
+    to{
+        opacity: 0;
+    }
+}
+
+@keyframes born {
+    from{
+        opacity: 0;
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+
+@media all and (min-width: 520px) {
+    header{
+        background: url(https://c4.wallpaperflare.com/wallpaper/744/905/203/ford-shelby-mustang-4k-wallpaper-preview.jpg);
+        background-attachment: fixed;
+        background-size: cover;
+        position: absolute;
+
+    }
+    h1{
+        translate: 0 1vh;
+    }
+    .imgconteiner{
+        translate: 0 -17vh;
+    }
+    .limg{
+        height: 100vh;
+        translate: 10vw 0vh;
+
+        margin-top: 0;
+        z-index: 2;
+        margin-bottom: 15vh;
+        animation: disappear 5s;
+    }
+    .gap{
+        display: none;
+    }
+    main{
+        overflow: hidden;
+        z-index: 1;
+    }
+    .conteiner{
+        height: 460px;
+        width: 798px;
+        overflow: hidden;
+        position: absolute;
+        top: 150%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius:10px;
+    }
+}
